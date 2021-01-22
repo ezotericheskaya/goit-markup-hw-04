@@ -33,10 +33,6 @@ ul {
   margin: 0;
 }
 
-a {
-  text-decoration: none;
-}
-
 body {
   background-color: #ffffff;
   color: var(--tittle-text-color);
@@ -47,6 +43,7 @@ body {
 }
 
 a {
+  cursor: pointer;
   text-decoration: none;
 }
 
@@ -111,6 +108,14 @@ a {
   color: var(--accent-button-color);
 }
 
+.contact-icon {
+  margin-right: 10px;
+  fill: currentColor;
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
 .contacts-nav {
   display: flex;
   align-items: center;
@@ -122,7 +127,7 @@ a {
 }
 
 .contacts-nav .contact-link {
-  display: block;
+  display: flex;
   padding-top: 32px;
   padding-bottom: 32px;
   font-weight: 500;
@@ -149,6 +154,11 @@ a {
   background-size: cover;
 }
 
+.section-hero .container {
+  padding-top: 200px;
+  padding-bottom: 200px;
+}
+
 .container {
   width: 1200px;
   align-items: center;
@@ -160,8 +170,6 @@ a {
 }
 
 .hero-container {
-  padding-top: 200px;
-  padding-bottom: 200px;
   width: 696px;
   margin-right: auto;
   margin-left: auto;
@@ -238,6 +246,10 @@ a {
   min-width: 200px;
   background-color: var(--accent-button-color);
   color: var(--accent-white-color);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
 }
 
 .team-section {
@@ -399,7 +411,9 @@ a {
 
 .team-item {
   width: 270px;
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
 }
 
 .team-item:not(:last-child) {
@@ -418,7 +432,91 @@ a {
   /* outline: 2px solid red; */
 }
 
-.adress {
+.team-social {
+  margin-top: 16px;
+  display: flex;
+  align-items: center;
+  padding: 0;
+  /* outline: solid blue; */
+}
+
+.icon-link {
+  /* outline: solid red; */
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 44px;
+  width: 44px;
+  line-height: 0px;
+  border-radius: 50%;
+  fill: var(--social-icon-link);
+}
+
+.team-links {
+  height: 44px;
+  width: 44px;
+  line-height: 0px;
+  border-radius: 50%;
+  fill: #afb1b8;
+}
+
+.team-links:not(:last-child) {
+  margin-right: 10px;
+}
+
+.social-icon {
+  /* fill: #afb1b8; */
+  width: 20px;
+  height: 20px;
+}
+
+.team-links:hover {
+  background-color: var(--accent-button-color);
+  fill: white;
+}
+
+.clients {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.clients-tittle {
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 42px;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.clients-list {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.client-link {
+  width: 170px;
+  height: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+  fill: #afb1b8;
+}
+
+.clients-list .client-link:focus,
+.clients-list .client-link:hover {
+  border-color: var(--accent-button-color);
+  fill: var(--accent-button-color);
+}
+
+.clients-item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.social-icon .adress {
   display: flex;
   flex-direction: column;
 }
@@ -467,6 +565,13 @@ a {
   margin-bottom: 30px;
 }
 
+.portfolio-element:hover {
+  border: 1px solid #eeeeee;
+  box-sizing: border-box;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
 .portfolio-name {
   padding-top: 20px;
   padding-bottom: 20px;
@@ -488,10 +593,11 @@ a {
 
 .footer-sect2 {
   margin-left: 70px;
-  display: block;
 }
 
 .footer-tittle {
+  margin-top: 0px;
+  margin-bottom: 20px;
   font-style: normal;
   font-weight: bold;
   font-size: 14px;
@@ -501,11 +607,39 @@ a {
 }
 
 .footer .container {
+  align-items: flex-start;
   display: flex;
-  flex-wrap: wrap;
 }
 
 .foot-links {
   display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-list:not(:last-child) {
+  margin-right: 10px;
+}
+
+.footer-link {
+  display: flex;
+  justify-content: center;
   align-items: center;
+  height: 44px;
+  width: 44px;
+  line-height: 0px;
+  border-radius: 50%;
+  fill: var(--accent-white-color);
+  background-color: #ffffff1a;
+}
+
+.footer-icon {
+  height: 20px;
+  width: 20px;
+}
+
+.footer-list:hover {
+  border-radius: 50%;
+  background-color: var(--accent-button-color);
+  fill: var(--accent-white-color);
 }
