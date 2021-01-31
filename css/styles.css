@@ -624,7 +624,7 @@ a {
 }
 
 .footer .container {
-  align-items: flex-start;
+  align-items: baseline;
   display: flex;
 }
 
