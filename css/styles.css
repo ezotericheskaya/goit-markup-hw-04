@@ -47,6 +47,11 @@ a {
   text-decoration: none;
 }
 
+.button {
+  cursor: pointer;
+  text-decoration: none;
+}
+
 .header {
   border-bottom: 1px solid #ececec;
 }
@@ -236,6 +241,9 @@ a {
 .button:focus {
   background-color: var(--accent-button-color);
   color: #ffffff;
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
 }
 
 .button-primary {
@@ -496,8 +504,8 @@ a {
 }
 
 .client-link {
-  width: 170px;
-  height: 90px;
+  width: 100%;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -514,6 +522,11 @@ a {
 
 .clients-item:not(:last-child) {
   margin-right: 30px;
+}
+
+.clients-item {
+  width: 170px;
+  height: 90px;
 }
 
 .social-icon .adress {
@@ -565,7 +578,11 @@ a {
   margin-bottom: 30px;
 }
 
-.portfolio-element:hover {
+.portfolio-link {
+  display: block;
+}
+.portfolio-link:hover,
+.portfolio-link:focus {
   border: 1px solid #eeeeee;
   box-sizing: border-box;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
